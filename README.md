@@ -41,9 +41,9 @@ uf.load_data_multivariate('./datasets/name-of-your-dataset.csv', 'training')
 ### Authors
 
 * [Mauricio A. De León Cárdenas](https://github.com/mauriciodeleonc) 505597
-* [Juan M. Álvarez Sánchez](https://github.com/jm_alvarezs) xxxxxx
-* [Viviana V. Gómez Martínez](https://github.com/mauriciodeleonc) xxxxxx
-* [Orlando X. Torres Guerra](https://github.com/mauriciodeleonc) xxxxxx
+* [Juan M. Álvarez Sánchez](https://github.com/jm-alvarezs) 511385
+* [Viviana Vázquez Gómez Martínez](https://github.com/ViviVazquez) 509271
+* [Orlando X. Torres Guerra](https://github.com/orlandoxtg) 513341
 
 ### Honor code
 We hereby declare that we have worked in this project with academic integrity.
