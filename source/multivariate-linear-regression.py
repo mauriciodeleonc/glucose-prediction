@@ -4,10 +4,13 @@
     linear regression using the gradient
     descent algorithm.
 
-    Author: Mauricio A. De Leon Cardenas
-    Email: mauricio.deleonc@udem.edu
+    Authors: 
+        * Mauricio A. De León Cárdenas 505597
+        * Juan M. Álvarez Sánchez 511385
+        * Viviana Vázquez Gómez Martínez 509271
+        * Orlando X. Torres Guerra 513341
     Institution: Universidad de Monterrey
-    First created: Sun 29 Mar 2020
+    First created: Thu 14 May 2020
 '''
 
 #import libraries
@@ -70,7 +73,7 @@ def main():
         print('\n' + 32*'-' + '\n' + 'Testing data scaled\n' + 32*'-')
         print(x_testing_scaled)
         
-        print('\n' + 32*'-' + '\n' + 'Last-mile cost [predicted]\n' + 32*'-')
+        print('\n' + 32*'-' + '\n' + 'Predicted insulin outputs\n' + 32*'-')
         print(predicted_prices.T)
         print('\n')
     

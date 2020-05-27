@@ -4,10 +4,13 @@
     including linear regression, gradient
     descent, L2 norm, amongst others.
 
-    Author: Mauricio A. De Leon Cardenas
-    Email: mauricio.deleonc@udem.edu
+    Authors: 
+        * Mauricio A. De León Cárdenas 505597
+        * Juan M. Álvarez Sánchez 511385
+        * Viviana Vázquez Gómez Martínez 509271
+        * Orlando X. Torres Guerra 513341
     Institution: Universidad de Monterrey
-    First created: Sun 29 Mar 2020
+    First created: Thu 14 May 2020
 '''
 
 import numpy as np
@@ -21,8 +24,6 @@ def load_data_multivariate(file):
 
         INPUT: 
             file: from which de data will be uploaded
-            type: string conditional to determine what to return 
-                (values: training || testing)
         
         OUTPUT:
             x_data: numpy array with all values of x
@@ -142,8 +143,7 @@ def eval_hypothesis_function_multivariate(w, x):
 
 def compute_gradient_of_cost_function_multivariate(x, y, w):
     '''
-        Function that evaluates if the x data and
-        w params array can be multiplied
+        Function that computes the gradient of the cost function
 
         INPUT:
             x: numpy array with the scaled values of x
@@ -166,8 +166,9 @@ def compute_gradient_of_cost_function_multivariate(x, y, w):
 
 def compute_L2_norm_multivariate(gradient_of_cost_function, x):
     '''
-        Function that calulates the stopping criteria with which
-        the gradient descent will use to stop
+        Function that calulates the L2 Norm value,
+        which will be compared to the stopping criteria 
+        allowing the gradient descent to decide when to stop.
 
         INPUT:
             gradient_of_cost_function: result of the subtraction of the
@@ -222,7 +223,7 @@ def predict(w, x_training):
             w: numpy array with the values of the parameters
 
         OUTPUT:
-            return the predicted prices to each data row
+            return the predicted insulin for each data row
     '''
     ones = np.atleast_2d(np.ones(len(x_training))).T
     x = np.hstack((ones, x_training))
