@@ -228,6 +228,6 @@ def predict(w, x_training):
     ones = np.atleast_2d(np.ones(len(x_training))).T
     x = np.hstack((ones, x_training))
 
-    prices = np.matmul(x,w)
+    prediction = np.matmul(x,w)
 
-    return prices
+    return prediction
