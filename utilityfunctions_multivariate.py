@@ -36,7 +36,7 @@ def load_data_multivariate(file):
         data = pd.read_csv(file)
 
         x_data = pd.DataFrame.to_numpy(data.loc[:, data.columns != 'Outcome'])
-  
+
         if 'Outcome' in data:
             y = pd.Series.to_numpy(data['Outcome'])
             y = np.atleast_2d(y)
@@ -223,11 +223,11 @@ def predict(w, x_training):
             w: numpy array with the values of the parameters
 
         OUTPUT:
-            return the predicted glucose for each data row
+            return the predicted insulin for each data row
     '''
     ones = np.atleast_2d(np.ones(len(x_training))).T
     x = np.hstack((ones, x_training))
 
-    glucose = np.matmul(x,w)
+    prices = np.matmul(x,w)
 
-    return glucose
+    return prices
