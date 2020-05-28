@@ -1,6 +1,6 @@
-# insulin-intake
+# glucose-intake
 
-Python multivariate linear regression algorithm which helps users with diabetes predict the amount of insulin to take based on glucose level, carbs intake, units of carbs, excersice done or not (defined by, 1 done, 0 not done) and time (in 24 hour format without colon).
+Python multivariate linear regression algorithm which helps users with diabetes predict the amount of glucose to take based on glucose level, carbs intake, units of insulin, excersice done or not (defined by, 1 done, 0 not done) and time (in 24 hour format without colon).
 
 ## Getting started
 

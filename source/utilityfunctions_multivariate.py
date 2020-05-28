@@ -223,11 +223,11 @@ def predict(w, x_training):
             w: numpy array with the values of the parameters
 
         OUTPUT:
-            return the predicted insulin for each data row
+            return the predicted glucose for each data row
     '''
     ones = np.atleast_2d(np.ones(len(x_training))).T
     x = np.hstack((ones, x_training))
 
-    prices = np.matmul(x,w)
+    glucose = np.matmul(x,w)
 
-    return prices
+    return glucose

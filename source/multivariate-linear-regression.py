@@ -27,7 +27,7 @@ def main():
     '''
 
     #Load training data 
-    x_data, y_data, mean, std = uf.load_data_multivariate('../datasets/insulin.csv')
+    x_data, y_data, mean, std = uf.load_data_multivariate('../datasets/glucose.csv')
     
     #Split the total data into training and testing data arrays using 80% for training and 20% for testing
     x_training, y_training, x_testing, y_testing = uf.split_data(x_data, y_data, 0.8)
@@ -48,7 +48,7 @@ def main():
 
 
     #Predict last mile cost from testing data
-    predicted_prices = uf.predict(w_params, x_testing_scaled)
+    predicted_glucose = uf.predict(w_params, x_testing_scaled)
 
     printing_flag = True
 
@@ -73,9 +73,18 @@ def main():
         print('\n' + 32*'-' + '\n' + 'Testing data scaled\n' + 32*'-')
         print(x_testing_scaled)
         
-        print('\n' + 32*'-' + '\n' + 'Predicted insulin outputs\n' + 32*'-')
-        print(predicted_prices.T)
+        print('\n' + 32*'-' + '\n' + 'Predicted glucose outputs\n' + 32*'-')
+        print(predicted_glucose.T)
         print('\n')
+
+        '''
+        print(y_testing.shape)
+        print(float(len(y_testing)))
+        print(len(y_testing))
+        print((y_testing-predicted_glucose))
+        print("mape")
+        print(np.mean(np.abs((y_testing - predicted_glucose) / y_testing)) * 100)
+        '''
     
     #Print iterations generated
     print(iterations, 'iterations')
