@@ -2,7 +2,8 @@
     multivariate-linear-regression.py
     Python script for testing a multivariate
     linear regression using the gradient
-    descent algorithm.
+    descent algorithm to predict peak blood
+    glucose level 2 hours after eating.
 
     Authors: 
         * Mauricio A. De León Cárdenas 505597
@@ -48,7 +49,7 @@ def main():
 
 
     #Predict last mile cost from testing data
-    predicted_prices = uf.predict(w_params, x_testing_scaled)
+    predicted_glucose = uf.predict(w_params, x_testing_scaled)
 
     printing_flag = True
 
@@ -73,8 +74,8 @@ def main():
         print('\n' + 32*'-' + '\n' + 'Testing data scaled\n' + 32*'-')
         print(x_testing_scaled)
         
-        print('\n' + 32*'-' + '\n' + 'Predicted insulin outputs\n' + 32*'-')
-        print(predicted_prices.T)
+        print('\n' + 32*'-' + '\n' + 'Predicted glucose outputs\n' + 32*'-')
+        print(predicted_glucose.T)
         print('\n')
     
     #Print iterations generated
